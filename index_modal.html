@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BABUSHKA MODAL</title>
     <style>
+      body {
+        max-width: 1200px;
+        min-height: 100vh;
+        margin: 0 auto;
+      }
       main {
-        /* max-width: 1200px; */
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
         gap: 1rem;
@@ -17,6 +21,7 @@
         border: 2px solid black;
         margin: 1rem;
         padding: 0.5rem;
+        border-radius: 15px 50px;
       }
 
       img {
@@ -45,6 +50,7 @@
         justify-content: center;
         align-items: center;
         display: none;
+        border-radius: 15px 50px;
       }
 
       #popup article {
