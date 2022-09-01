@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BABUSHKA MODAL</title>
-    <style>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- <style>
       body {
         max-width: 1200px;
         min-height: 100vh;
@@ -13,7 +15,7 @@
       }
       main {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 1rem;
       }
 
@@ -21,7 +23,8 @@
         border: 2px solid black;
         margin: 3rem;
         padding: 0.5rem;
-        border-radius: 15px 50px;
+        justify-content: space-between;
+        /* border-radius: 15px 50px; */
       }
 
       img {
@@ -60,26 +63,28 @@
 
         background-color: white;
       }
-    </style>
+    </style> -->
   </head>
 
   <body>
     <header>
-      <h1>Alle</h1>
+      <h1>Babushka</h1>
     </header>
     <nav>
-      <button data-kategori="alle" class="valgt">Alle</button>
+      <button data-kategori="alle" class="valgt">Babushka</button>
       <button data-kategori="hovedretter">Hovedretter</button>
       <button data-kategori="forretter">Forretter</button>
       <button data-kategori="sideorders">Side Orders</button>
       <button data-kategori="desserter">Desserter</button>
       <button data-kategori="drikkevarer">Drikkevarer</button>
     </nav>
+
     <main id="holder"></main>
     <template>
       <article>
-        <h2 class="navn"></h2>
         <img src="" alt="" />
+        <h2 class="navn"></h2>
+
         <p class="kortbeskrivelse"></p>
         <p class="oprindelsesregion"></p>
         <p class="pris"></p>
@@ -87,15 +92,13 @@
     </template>
 
     <div id="popup">
-      <!-- <template> -->
       <article>
-        <img src="" alt="" />
+        <img src="temp" alt="temp" />
         <h2></h2>
         <p></p>
         <p></p>
         <p></p>
       </article>
-      <!-- </template> -->
     </div>
 
     <script>
@@ -145,7 +148,7 @@
             klon.querySelector("img").src = "billeder/" + ret.billednavn + "-md.jpg";
             klon.querySelector(".kortbeskrivelse").textContent = ret.kortbeskrivelse;
             klon.querySelector(".oprindelsesregion").textContent = "Oprindeligt fra " + ret.oprindelsesregion;
-            klon.querySelector(".pris").textContent = ret.pris + " DKK";
+            klon.querySelector(".pris").textContent = ret.pris + ",00 DKK";
             holder.appendChild(klon);
           }
         });
@@ -162,7 +165,7 @@
         popup.querySelector("h2").textContent = retData.navn;
         popup.querySelector("p").textContent = retData.langbeskrivelse;
         popup.querySelector("p+p").textContent = "Oprindeligt fra " + retData.oprindelsesregion;
-        popup.querySelector("p+p+p").textContent = retData.pris + " DKK";
+        popup.querySelector("p+p+p").textContent = retData.pris + ",00 DKK";
       }
     </script>
   </body>
