@@ -13,8 +13,6 @@ body {
   min-height: 100vh;
   margin: 0 auto;
   background-color: white;
-  /* background-image: url("billeder/IMG_9380-kopi.jpg");
-  background-size: cover; */
 }
 
 main {
@@ -64,13 +62,6 @@ img {
 
 /* TEXT */ /* TEXT */ /* TEXT */
 
-header {
-  background-image: url("billeder/borsjtj-md.jpg");
-  background-size: cover;
-  height: 200px;
-  text-align: center;
-}
-
 nav {
   max-width: 500px;
   text-align: center;
@@ -107,6 +98,7 @@ h1 {
   font-size: 5rem;
   margin-top: 2.5rem;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 h2 {
