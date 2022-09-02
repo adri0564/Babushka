@@ -65,6 +65,9 @@ img {
 /* TEXT */ /* TEXT */ /* TEXT */
 
 header {
+  background-image: url("billeder/borsjtj-md.jpg");
+  background-size: cover;
+  height: 200px;
   text-align: center;
 }
 
