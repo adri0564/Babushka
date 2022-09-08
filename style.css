@@ -71,9 +71,9 @@ nav {
 }
 
 @media (min-width: 550px) {
-}
-nav {
-  max-width: 550px;
+  nav {
+    max-width: 550px;
+  }
 }
 
 @media (min-width: 1050px) {
